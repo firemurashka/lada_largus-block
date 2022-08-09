@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Relvise</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,900&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+</head>
+
+<body>
+<style>
+	.content {
+		 display: flex;
+	}
+
+	.content__text {
+		 margin-right: 20px;
+	}
+
+	.content__text-p {
+		 font-size: 14pt;
+	}
+
+	.content__text-title::after {
+		 content: "";
+		 display: block;
+		 width: 150px;
+		 height: 3px;
+		 background-color: #fd2c1a;
+		 margin-top: 10px;
+	}
+
+	.content__banner {
+			  min-width: 372px;
+			  margin-top: 71px;
+		 }
+
+		 .content__banner-item {
+			  background-image: url("//f.nodacdn.net/421656");
+			  background-position: 50%;
+			  background-size: cover;
+			  border-radius: 5px;
+			  overflow: hidden;
+			  transition: box-shadow .5s, transform .2s;
+			  height: 300px;
+			  display: block;
+			  text-decoration: none;
+			  margin-bottom: 20px;
+		 }
+
+		 .content__banner-item span {
+			  padding: 20px;
+			  display: block;
+			  font-size: 14pt;
+			  color: #fff;
+		 }
+
+		 .content__banner-item-short {
+			  height: 150px;
+			  margin-bottom: 20px;
+			  background-image: url("//f.nodacdn.net/422822");
+		 }
+
+		 .content__banner-item:hover {
+			  box-shadow: 0 2px 4px #fbc430;
+			  transform: translateY(-1px);
+		 }
+
+		 .title-mobile {
+			  display: none;
+		 }
+
+		 @media (max-width: 740px) {
+			  .content {
+					flex-direction: column-reverse;
+			  }
+
+			  .content__text-title {
+					display: none;
+			  }
+
+			  .title-mobile {
+					display: block;
+			  }
+
+			  .content__banner {
+					margin-top: 0;
+					margin-bottom: 20px;
+					display: flex;
+					flex-direction: column;
+					min-width: auto;
+			  }
+
+			  .content__banner-item-short {
+					margin-bottom: 20px;
+			  }
+		 }
+.vin-wrap {
+			  display: block;
+			  max-width: 367px;
+			  border-radius: 5px;
+			  border: 2px solid #fbc430;
+			  margin-bottom: 20px;
+			  padding: 25px;
+			  font-family: Montserrat-Regular;
+		 }
+
+		 .vin-wrap-title {
+			  display: block;
+			  max-width: 330px;
+			  font-size: 24px;
+			  line-height: 29px;
+			  color: #000000;
+			  font-weight: 700;
+			  margin: 0;
+		 }
+
+		 .vin-form {
+			  display: flex;
+			  flex-direction: column;
+		 }
+
+		 .vin-form-label {
+			  display: block;
+			  font-size: 24px;
+			  line-height: 29px;
+			  color: #000000;
+			  font-weight: 400;
+			  margin-top: 36px;
+		 }
+
+		 .vin-form-input-vin {
+			  display: block;
+			  max-width: 100%;
+			  height: 60px;
+			  border-radius: 5px;
+			  font-size: 18px;
+			  line-height: 22px;
+			  color: #000000;
+			  background-color: #f1f1f1;
+			  font-weight: 500;
+			  margin-top: 10px;
+			  text-align: center;
+			  border: none;
+		 }
+
+		 .vin-form-input-vin::placeholder {
+			  color: #bbbbbb;
+			  opacity: 1;
+		 }
+
+		 .vin-form-remark {
+			  display: block;
+			  max-width: 333px;
+			  font-size: 19px;
+			  line-height: 23px;
+			  color: #000000;
+			  font-weight: 100;
+			  margin-top: 15px;
+		 }
+
+		 .vin-form-remark-span {
+			  font-weight: 600;
+		 }
+
+		 .vin-form-submit {
+			  display: block;
+			  max-width: 100%;
+			  height: 60px;
+			  border-radius: 5px;
+			  font-size: 20px;
+			  line-height: 24px;
+			  color: #000000;
+			  font-weight: 500;
+			  margin-top: 25px;
+			  text-align: center;
+			  border: 3px solid #d85032;
+			  background: none;
+			  cursor: pointer;
+			  transition: all 0.2s ease-in-out;
+		 }
+
+		 .vin-form-submit:hover {
+			  color: #ffffff;
+			  background: #d85032;
+			  box-shadow: 0px 0px 12px rgba(218, 108, 83, 0.75);
+		 }
+
+		 @media screen and (max-width: 800px) {
+			  .vin-wrap {
+					display: none;
+			  }
+		 }
+</style>
+<h1 class="content__text-title title-mobile">
+	ЗАПЧАСТИ LADA LARGUS
+</h1>
+<div class="content">
+	<div class="content__text">
+		 <h1 class="content__text-title">
+			  ЗАПЧАСТИ LADA LARGUS
+		 </h1>
+		 <p class="content__text-p">
+			  Компания <a href="https://dexup.ru/o_kompany">ДЕКСАП</a> предлагает полный ассортимент запасных частей и
+			  аксессуаров для автомобилей LADA LARGUS.
+			  В нашем интернет-магазине вы можете приобрести все необходимые запасные части для автомобиля данной
+			  марки, таких как ходовая, двигатель, трансмиссия, КПП, электрика, оптика и кузовные детали. В наличии и
+			  под заказ, как оригинальные запчасти, так и аналоги известных производителей, не уступающие по
+			  характеристикам и качеству. Более 3000 наименований запчастей, деталей и узлов для автомобиля LADA
+			  LARGUS доступны сейчас для Вас на нашем сайте.
+		 </p>
+		 <div class="fr-flex-container-fluid">
+			  <div class="fr-flex-row">
+					<div class="fr-flex-col-12 fr-flex-col-md-4"><img src="//f.nodacdn.net/411761" alt="" width="640"
+							  height="397" />
+						 <div style="text-align: center;">
+							  <ul>
+									<li><a href="https://dexup.ru/auto2dV2/?action=groups&amp;typeCatalog=CARS_NATIVE&amp;mark=VAZ&amp;model=37534"
+											  target="_blank" rel="noopener noreferrer">FS015-40 (5-дверный 2-местный
+											  фургон)</a></li>
+									<li><a href="https://dexup.ru/auto2dV2/?action=groups&amp;typeCatalog=CARS_NATIVE&amp;mark=VAZ&amp;model=37535"
+											  target="_blank" rel="noopener noreferrer">FS015-41 (3-дверный 2-местный
+											  фургон)</a></li>
+							  </ul>
+						 </div>
+					</div>
+					<div class="fr-flex-col-12 fr-flex-col-md-4"><img src="//f.nodacdn.net/411805" alt="" width="640"
+							  height="397" />
+						 <div style="text-align: center;">
+							  <ul>
+									<li><a href="https://dexup.ru/auto2dV2/?action=groups&amp;typeCatalog=CARS_NATIVE&amp;mark=VAZ&amp;model=37530"
+											  target="_blank" rel="noopener noreferrer">KS015-41 (5-местный универсал)</a>
+									</li>
+									<li><a
+											  href="https://dexup.ru/auto2dV2/?action=groups&amp;typeCatalog=CARS_NATIVE&amp;mark=VAZ&amp;model=37531">KSOY5-42
+											  (5-местный универсал)</a></li>
+									<li><a href="https://dexup.ru/auto2dV2/?action=groups&amp;typeCatalog=CARS_NATIVE&amp;mark=VAZ&amp;model=37532"
+											  target="_blank" rel="noopener noreferrer">RS015-41 (7-местный универсал)</a>
+									</li>
+									<li><a href="https://dexup.ru/auto2dV2/?action=groups&amp;typeCatalog=CARS_NATIVE&amp;mark=VAZ&amp;model=37533"
+											  target="_blank" rel="noopener noreferrer">RSOY5-42 (7-местный универсал)</a>
+									</li>
+							  </ul>
+						 </div>
+					</div>
+					<div class="fr-flex-col-12 fr-flex-col-md-4"><img src="//f.nodacdn.net/411762" alt="" width="640"
+							  height="397" />
+						 <div style="text-align: center;">
+							  <ul>
+									<li><a href="https://dexup.ru/auto2dV2/?action=groups&amp;typeCatalog=CARS_NATIVE&amp;mark=VAZ&amp;model=60233"
+											  target="_blank" rel="noopener noreferrer">LARGUS KROSS</a></li>
+							  </ul>
+						 </div>
+					</div>
+			  </div>
+		 </div>
+	</div>
+	<div class="content__banner">
+		 <a href="/reg" class="content__banner-item content__banner-item-short"> <span><br />Пройдите простую<br>регистрацию и покупайте<br>с выгодой!</span> </a>
+	</a>
+	<div class="vin-wrap">
+		 <h2 class="vin-wrap-title">Онлайн-помощь специалиста</h2>
+		 <form class="vin-form" action="/vinquery" method="get" id="vin-main-form">
+			  <label class="vin-form-label" for="input-vin">VIN-код</label>
+			  <input class="vin-form-input-vin" id="input-vin" type="text" value="" name="vin" maxlength="17"
+					placeholder="VIN-код вашего автомобиля" />
+			  <p class="vinRemark vin-form-remark">
+					Более 10 специалистов прямо сейчас готовы вас
+					проконсультировать.<span class="vin-form-remark-span">
+						 Примерное время ожидания ответа на Ваш запрос 3-10 минут.
+					</span>
+			  </p>
+			  <input class="mainVinFormButtonv vin-form-submit" type="submit" value="ОТПРАВИТЬ ЗАПРОС" />
+		 </form>
+	</div>
+	</div>
+</div>
+<!-- Продукты -->
+
+<style>
+	.tabp *,
+	.tabp *::before,
+	.tabp *::after {
+		 margin: 0;
+		 padding: 0;
+		 box-sizing: border-box;
+	}
+
+	.tabp {
+		 max-width: 1200px;
+		 margin: auto;
+		 margin-top: 20px;
+
+	}
+
+	.list {
+		 display: none;
+		 flex-wrap: wrap;
+		 justify-content: space-between;
+		 list-style-type: none;
+	}
+
+	.list-item {
+		 width: 22%;
+		 margin-bottom: 40px;
+		 display: flex;
+		 flex-direction: column;
+		 justify-content: space-between;
+	}
+
+	.list-item-pic {
+		 width: 100%;
+		 background: #EEEEEE;
+		 display: block;
+		 margin-bottom: 20px;
+	}
+
+	.list-item-text {
+		 color: #535353;
+		 font-weight: 500;
+		 font-size: 18px;
+		 line-height: 22px;
+		 margin-bottom: 20px;
+	}
+
+	.list-item-cost {
+		 color: #000000;
+		 font-style: normal;
+		 font-weight: bold;
+		 font-size: 18px;
+		 line-height: 22px;
+		 margin-bottom: 20px;
+	}
+
+	.list-item-link {
+		 text-decoration: none;
+		 text-align: center;
+		 text-transform: uppercase;
+		 padding-top: 17px;
+		 padding-bottom: 15px;
+		 display: block;
+		 font-style: normal;
+		 font-weight: bold;
+		 font-size: 18px;
+		 line-height: 22px;
+		 color: #535353;
+		 border: 1px solid #535353;
+		 box-sizing: border-box;
+		 border-radius: 5px;
+		 transition: all .3s ease;
+	}
+
+	.list-item-link:hover {
+		 color: #fbc430;
+		 border: 1px solid #fbc430;
+	}
+
+	#list0:checked~#list0item,
+	#list1:checked~#list1item,
+	#list2:checked~#list2item,
+	#list3:checked~#list3item,
+	#list4:checked~#list4item,
+	#list5:checked~#list5item,
+	#list6:checked~#list6item {
+		 display: flex;
+	}
+
+	#list0:checked~.tabp-label-wrap .tabp-label-0::after,
+	#list1:checked~.tabp-label-wrap .tabp-label-1::after,
+	#list2:checked~.tabp-label-wrap .tabp-label-2::after,
+	#list3:checked~.tabp-label-wrap .tabp-label-3::after,
+	#list4:checked~.tabp-label-wrap .tabp-label-4::after,
+	#list5:checked~.tabp-label-wrap .tabp-label-5::after,
+	#list6:checked~.tabp-label-wrap .tabp-label-6::after {
+		 width: 100%;
+	}
+
+	.tabp input {
+		 display: none;
+	}
+
+	.tabp-label-wrap {
+		 display: flex;
+		 justify-content: end;
+		 border-bottom: 1px solid #e2e4e8;
+	}
+
+	.tabp-label {
+		 cursor: pointer;
+		 font-size: 18px;
+		 display: block;
+		 margin-left: 25px;
+		 position: relative;
+		 padding-bottom: 20px;
+	}
+
+	.tabp-label::after {
+		 left: 0;
+		 bottom: -1px;
+		 content: "";
+		 width: 0;
+	  height: 4px;
+		 position: absolute;
+		 transition: all .3s ease;
+		 background-color: #b20000;
+	}
+
+	.tabp-label-title {
+		 margin-right: auto;
+		 font-size: 24px;
+		 display: block;
+	}
+
+	@media screen and (max-width: 1000px) {
+		 .list-item {
+			  width: 48%;
+		 }
+	}
+
+	@media screen and (max-width: 800px) {
+.tabp {
+			  display: none;
+		 }
+		 #list0:checked~.tabp-label-wrap .tabp-label-0,
+		 #list1:checked~.tabp-label-wrap .tabp-label-1,
+		 #list2:checked~.tabp-label-wrap .tabp-label-2,
+		 #list3:checked~.tabp-label-wrap .tabp-label-3,
+		 #list4:checked~.tabp-label-wrap .tabp-label-4,
+		 #list5:checked~.tabp-label-wrap .tabp-label-5,
+		 #list6:checked~.tabp-label-wrap .tabp-label-6 {
+			  position: absolute;
+			  bottom: 5px;
+			  width: 100%;
+			  font-weight: 700;
+			  color: #383e47;
+			  border-color: #383e47;
+			  pointer-events: none;
+		 }
+
+		 .tabp-label-title {
+			  width: 100%;
+			  margin-right: 0;
+			  margin-left: 0;
+			  display: block;
+			  text-align: center;
+			  margin-bottom: 20px;
+		 }
+
+		 .tabp-label-wrap {
+			  flex-wrap: wrap;
+			  justify-content: space-between;
+			  padding-bottom: 60px;
+			  position: relative;
+		 }
+
+		 .tabp-label {
+			  width: 48%;
+			  padding: 11px 15px 9px 15px;
+			  line-height: 20px;
+			  font-size: 16px;
+			  font-weight: 700;
+			  display: block;
+			  white-space: nowrap;
+			  text-transform: uppercase;
+			  border-radius: 3px;
+			  border: 1px solid #e2e4e8;
+			  margin-bottom: 10px;
+			  margin-left: 0;
+			  text-align: center;
+		 }
+</style>
+
+<div class="tabp">
+	<input type="radio" name="list-inputs" class="tabp__input" id="list0" checked>
+	<input type="radio" name="list-inputs" class="tabp__input" id="list1">
+	<input type="radio" name="list-inputs" class="tabp__input" id="list2">
+	<input type="radio" name="list-inputs" class="tabp__input" id="list3">
+	<input type="radio" name="list-inputs" class="tabp__input" id="list4">
+	<input type="radio" name="list-inputs" class="tabp__input" id="list5">
+	<input type="radio" name="list-inputs" class="tabp__input" id="list6">
+	<div class="tabp-label-wrap">
+		 <p class="tabp-label-title">
+			  ПОПУЛЯРНЫЕ ТОВАРЫ
+		 </p>
+		 <label for="list0" class="tabp-label tabp-label-0">
+			  Фильтра
+		 </label>
+		 <label for="list1" class="tabp-label tabp-label-1">
+			  Масла
+		 </label>
+		 <label for="list2" class="tabp-label tabp-label-2">
+			  Оптика
+		 </label>
+		 <label for="list3" class="tabp-label tabp-label-3">
+			  Ходовая
+		 </label>
+		 <label for="list4" class="tabp-label tabp-label-4">
+			  Тормоза
+		 </label>
+		 <label for="list5" class="tabp-label tabp-label-5">
+			  Двигатель
+		 </label>
+		 <label for="list6" class="tabp-label tabp-label-6">
+			  Кузов
+		 </label>
+	</div>
+	<ul id="list0item" class="list">
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423397" alt="Фото">
+			  <p class="list-item-text">Фильтр масляный LADA Largus 7700274177</p>
+			  <p class="list-item-cost">
+				  300 руб
+			  </p>
+			  <a href="/parts/RENAULT/7700274177" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423403" alt="Фото">
+			  <p class="list-item-text">фильтр воздушный LADA Largus 165460509R</p>
+			  <p class="list-item-cost">
+					800 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423404" alt="Фото">
+			  <p class="list-item-text">Фильтр масляный LADA Largus 21080-101200508 </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423405" alt="Фото">
+			  <p class="list-item-text">Фильтр воздушный LADA Largus 8450033130 </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+	</ul>
+	<ul id="list1item" class="list">
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423447" alt="Фото">
+			  <p class="list-item-text">1Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423448" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423478" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423480" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+	</ul>
+	<ul id="list2item" class="list">
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423493" alt="Фото">
+			  <p class="list-item-text">1Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423492" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423495" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423494" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+	</ul>
+	<ul id="list3item" class="list">
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423506" alt="Фото">
+			  <p class="list-item-text">1Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423507" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423505" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/423508" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+	</ul>
+	<ul id="list4item" class="list">
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">1Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+	</ul>
+	<ul id="list5item" class="list">
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">1Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+	</ul>
+	<ul id="list6item" class="list">
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">1Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+		 <li class="list-item">
+			  <img class="list-item-pic" src="//f.nodacdn.net/422026" alt="Фото">
+			  <p class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+			  <p class="list-item-cost">
+					2000 руб
+			  </p>
+			  <a href="#" class="list-item-link">
+					Купить
+			  </a>
+		 </li>
+	</ul>
+</div>
+
+<!-- Продукты End -->
+</body></html>
